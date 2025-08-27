@@ -3,10 +3,16 @@ import "./NavBar.css";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/300x300.png";
 import { useState } from "react";
+import i18n from "../../i18n";
 
 export function NavBar() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen(!isLanguageMenuOpen);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,20 +28,54 @@ export function NavBar() {
 
       <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         <NavLink to="/" className="nav-link">
-          <a href="#">{t("home_button")}</a>
+          <span>{t("home_button")}</span>
         </NavLink>
-        <NavLink to="/about-us" /*about-us*/ className="nav-link">
-          <a href="#">{t("about_us_button")}</a>
+        <NavLink to="/about-us" className="nav-link">
+          <span>{t("about_us_button")}</span>
         </NavLink>
-        <NavLink to="/" /*Services*/ className="nav-link">
-          <a href="#">{t("services")}</a>
+        <NavLink to="/services" className="nav-link">
+          <span>{t("services_button")}</span>
         </NavLink>
-        <NavLink to="/" /*contact-us*/ className="nav-link">
-          <a href="#">{t("contact_us_button")}</a>
+        <NavLink to="/contact-us" className="nav-link">
+          <span>{t("contact_us_button")}</span>
         </NavLink>
       </div>
 
-      <div className="navbar-toggle-custom" onClick={toggleMenu}>
+      <div className="navbar-icons">
+
+        <span className="language-name">{(i18n.language === "en") ? "En" : "Es" }</span>
+        <span
+          className="material-symbols-outlined"
+          onClick={toggleLanguageMenu}
+        >
+          captive_portal
+        </span>
+      </div>
+
+      {isLanguageMenuOpen && (
+        <div className={`more-menu ${isLanguageMenuOpen ? ' show' : ''}`}>
+          <span
+            className="menu-item-us"
+            onClick={() => {
+              i18n.changeLanguage("en");
+              toggleLanguageMenu();
+            }}
+          >
+            English
+          </span>
+          <span
+            className="menu-item-us"
+            onClick={() => {
+              i18n.changeLanguage("es");
+              toggleLanguageMenu();
+            }}
+          >
+            Español
+          </span>
+        </div>
+      )}
+
+      <div className="navbar-toggle" onClick={toggleMenu}>
         <span className="material-icons">menu</span>
       </div>
     </nav>
