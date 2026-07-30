@@ -1,25 +1,21 @@
 :root {
-  --primary-50: #F1F6FC;
-  --primary-100: #839CC2;
-  --primary-200: #597BAE;
-  --primary-300: #425E87;
-  --primary-400: #2E415E;
-  --primary-500: #26364E;
-  --primary-600: #1F2B3F;
-  --primary-700: #17202F;
-  --primary-800: #0F161F;
-  --secondary-300: #E1F0E3;
-  --secondary-400: #DDEEDF;
-  --secondary-500: #91C897;
-  --secondary-600: #91C897;
-  --secondary-700: #6AB573;
+  margin: 0;
+  padding: 0;
+  
+  --primary-50: #f9efea;
+  --primary-100: #88281c;
+  --primary-200: #68943c;
+  --light-green: #dfffbe;
+  --primary-500: #266c62;
+  --secondary-300: #84d2c5;
+  --secondary-500: #d2431b;
+  --color: #c4ede6;
   --h5-size: 1.563rem;
 
   --gradient: linear-gradient (25deg,
       rgba(1, 115, 115, 1) 0%,
       rgba(170, 217, 209, 1) 100%);
 }
-
 body{
   margin: 0px;
   padding: 0px;
@@ -27,7 +23,7 @@ body{
 }
 
 .h1 {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-size: 3.815rem;
   line-height: 106%;
   letter-spacing: -3px;
@@ -35,7 +31,7 @@ body{
 }
 
 .h2 {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-size: 3.052rem;
   line-height: 120%;
   letter-spacing: 3px;
@@ -43,7 +39,7 @@ body{
 }
 
 .h3 {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-weight: 700;
   font-size: 2.441rem;
   line-height: 120%;
@@ -52,7 +48,7 @@ body{
 }
 
 .h4 {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-weight: 700;
   font-size: 1.953rem;
   line-height: 120%;
@@ -61,7 +57,7 @@ body{
 }
 
 .h5 {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-weight: 700;
   font-size: 1.563rem;
   line-height: 140%;
@@ -70,7 +66,7 @@ body{
 }
 
 .h6 {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 140%;
@@ -79,7 +75,7 @@ body{
 }
 
 .large-text {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-size: 1rem;
   line-height: 140%;
   letter-spacing: -0.64px;
@@ -87,7 +83,7 @@ body{
 }
 
 .small-text {
-  font-family: "Raleway";
+  font-family: "poppins";
   font-size: 0.8rem;
   line-height: 140%;
   letter-spacing: -0.64px;

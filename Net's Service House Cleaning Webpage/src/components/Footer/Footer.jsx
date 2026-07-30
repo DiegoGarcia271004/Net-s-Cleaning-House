@@ -1,4 +1,4 @@
-import logo from "../../assets/300x300.png";
+import logo from "../../assets/senor_nunca_sucio.png";
 import { useTranslation } from "react-i18next";
 import "./Footer.css";
 import { useState } from "react";

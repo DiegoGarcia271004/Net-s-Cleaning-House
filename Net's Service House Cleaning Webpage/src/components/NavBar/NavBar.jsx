@@ -20,23 +20,26 @@ export function NavBar() {
 
   return (
     <nav className="navbar">
-      <NavLink to="/">
+      <NavLink to="/" className={"navbar-title"}>
+        <span className="first-part">Net's Service </span><span className="second-part">House Cleaning</span>
+      </NavLink>
+      {/*<NavLink to="/">
         <div className="navbar-logo">
           <img src={logo} alt="Logo" className="logo-image" />
         </div>
-      </NavLink>
+      </NavLink> */}
 
       <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         <NavLink to="/" className="nav-link">
           <span>{t("home_button")}</span>
         </NavLink>
-        <NavLink to="/about-us" className="nav-link">
+        <NavLink to="/" className="nav-link">
           <span>{t("about_us_button")}</span>
         </NavLink>
-        <NavLink to="/services" className="nav-link">
+        <NavLink to="/" className="nav-link">
           <span>{t("services_button")}</span>
         </NavLink>
-        <NavLink to="/contact-us" className="nav-link">
+        <NavLink to="/" className="nav-link">
           <span>{t("contact_us_button")}</span>
         </NavLink>
       </div>
